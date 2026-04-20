@@ -63,7 +63,7 @@ efficient-object-tracking-MOSSE/
 │   └── template_matching_data/
 │
 ├── assets/
-│   ├── ui_demo.pn
+│   ├── ui_demo.png
 │   └── results/
 │       ├── high_psr.png
 │       ├── low_psr.png
