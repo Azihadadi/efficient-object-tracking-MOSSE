@@ -45,7 +45,7 @@ The tracker is based on the MOSSE adaptive correlation filter:
 
 ## Project Structure
 ```
-adaptive_correlation_filter/
+efficient-object-tracking-MOSSE/
 ├── common/
 │   └── utils.py
 │
