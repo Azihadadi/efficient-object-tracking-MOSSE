@@ -70,9 +70,10 @@ efficient-object-tracking-MOSSE/
 │       ├── correlation_surface.png
 │       ├── kernel_response.png
 │       └── tracking_example.png
+├── report/
+│   └── report.pdf
 │
 ├── ui.py
-├── report.pdf
 └── README.md
 
 ```
