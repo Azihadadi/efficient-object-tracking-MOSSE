@@ -27,7 +27,7 @@ Users can:
 - Pause / resume / reset tracking
 
 
-<img src="./assets/ui_demo.png" alt="demo" width="400"/>
+<img src="./assets/ui_demo.png" alt="demo" width="500"/>
 
 ---
 
@@ -44,3 +44,116 @@ The tracker is based on the MOSSE adaptive correlation filter:
 ---
 
 ## Project Structure
+```
+adaptive_correlation_filter/
+├── common/
+│   └── utils.py
+│
+├── core/
+│   ├── controller.py
+│   ├── mosse.py
+│   ├── template_matching.py
+│   └── matlab/
+│       ├── cross_correlation.m
+│       └── mesh_correlation_results.m
+│
+├── data/
+│   ├── videos/
+│   ├── matlab/
+│   └── template_matching_data/
+│
+├── assets/
+│   ├── ui/
+│   │   └── ui.png
+│   └── results/
+│       ├── high_psr.png
+│       ├── low_psr.png
+│       ├── correlation_surface.png
+│       ├── kernel_response.png
+│       └── tracking_example.png
+│
+├── ui.py
+├── report.pdf
+└── README.md
+
+```
+
+---
+
+## Results
+
+### High PSR Tracking (Success Case)
+
+Robust tracking under occlusion and rotation.
+
+<img src="./assets/results/high_psr.png" alt="High PSR" width="200"/>
+
+---
+
+### Low PSR Failure Case
+
+Tracking fails when correlation response becomes ambiguous.
+
+<img src="./assets/results/low_psr.png" alt="Low PSR" width="200"/>
+
+
+---
+
+### Correlation Response Surface
+
+Frequency-domain correlation visualization.
+
+<img src="./assets/results/correlation_surface.png" alt="Correlation" width="300"/>
+
+
+---
+
+### Kernel (Learned Filter)
+
+Visualization of learned MOSSE filter.
+
+<img src="./assets/results/kernel_response.png" alt="Kernel" width="400"/>
+
+
+---
+
+### Tracking Output
+
+Real-time bounding box tracking with PSR display.
+
+<img src="./assets/results/tracking_example.png" alt="Tracking" width="400"/>
+
+
+---
+
+## Evaluation
+
+Comparison with classical methods:
+
+- Cross-correlation (MATLAB)
+- Template matching (OpenCV)
+
+### Key Findings:
+- MOSSE is robust under occlusion and rotation
+- Classical template matching fails under appearance changes
+- PSR effectively measures tracking confidence
+
+---
+
+## Controls
+
+- Mouse Drag → Select ROI
+- Space → Pause/Resume
+- C → Clear trackers
+- ESC → Exit
+
+---
+
+## Requirements
+
+- Python 3.7+
+- OpenCV
+- NumPy
+- Tkinter
+- Matplotlib
+
